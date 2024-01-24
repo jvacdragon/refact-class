@@ -11,17 +11,17 @@ Seus atributos são:
 São elas e suas funções: 
 
 
-### * visualizar
+* ###  visualizar
 
 Retorna uma String contendo informações e todos os atributos da classe.
 
-### * aumentarSenioridade 
+* ###  aumentarSenioridade 
 
 Aumenta automaticamente a senioridade do colaborador e seu salário de forma proporcional de acordo com a senioridade atual. Seguindo a ordem: 
 JR (junior) -> PL(PL) -> SR(senior) -> TL(tech lead)
 A ordem respectiva de aumento de salário é vezes: 1.7, 1.6, 1.5
 
-### * alterarSalario
+* ###  alterarSalario
 Aqui é possível alterar o salário de um colaborador de forma manual. O método tem como parâmetro o novo salário do tipo Double.
 
 
@@ -38,13 +38,13 @@ Esta é uma classe que simula uma empresa com seus dados básicos. Seus atributo
 
 Aqui estão seus métodos e suas funcionalidades:
 
-### * verColaboradores
+* ###  verColaboradores
 Este método mostra todos os colaboradores que estão cadastrados na empresa
 
-### * adicionarColaborador
+* ### adicionarColaborador
 Aqui é passado um parâmetro do tipo Colaborador e ele é adicionado à lista de colaboradores da empresa. Caso este colaborador já esteja cadastrado na empresa, será mostrado um erro dizendo que um colaborador de mesmo cpf já está cadastrado na empresa.
 
-### * removerColaboradorPorCPF
+* ### removerColaboradorPorCPF
 Aqui é passado um parâmetro do tipo String que será usado para buscar algum colaborador em que o CPF seja igual aopassado por parâmetro. Caso seja encontrado, esse colaborador será removido da lista de colaboradores da empresa, caso não, irá ser mostrada uma mensagem de erro dizendo que o colaborador não existe nessa empresa.
 
 
