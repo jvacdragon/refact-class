@@ -6,7 +6,7 @@ Seus atributos são:
 * nome : String
 * cpf : String
 * salario : Double
-* isAtivo : false
+* isAtivo : boolean = false
 
 São elas e suas funções: 
 
