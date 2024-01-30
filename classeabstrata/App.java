@@ -1,16 +1,18 @@
 package br.com.vainaweb.backendt2.classeabstrata;
 
+import br.com.vainaweb.backendt2.classeabstrata.validador.CpfCnpjUtils;
+
 enum Senioridade {JR, PL, SR, TL};
 
 public class App {
 	public static void main(String[] args) {
 
-		Empresa e1 = new Empresa("Empresa 1", "123456");
-		Empresa e2 = new Empresa("Empresa 2", "456789");
+		Empresa e1 = new Empresa("Empresa 1", "08.502.5900001-62");
+		Empresa e2 = new Empresa("Empresa 2", "00.850.1470001-70");
 		
-		DevBackEnd devBack = new DevBackEnd("Isael", "1234-5", 10000.0, Senioridade.JR);
-		DevFrontEnd devFront = new DevFrontEnd("Paulo", "9876-4", 10000.0, Senioridade.JR);
-		Designer designer = new Designer("Caroline", "3456-9", 15000.0, Senioridade.JR);
+		DevBackEnd devBack = new DevBackEnd("Isael", "161.873.260-91", 10000.0, Senioridade.JR);
+		DevFrontEnd devFront = new DevFrontEnd("Paulo", "955.648.160-56", 10000.0, Senioridade.JR);
+		Designer designer = new Designer("Caroline", "796.226.140-43", 15000.0, Senioridade.JR);
 
 		e1.adicionarColaborador(devBack);
 		e1.adicionarColaborador(designer);

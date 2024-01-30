@@ -1,18 +1,26 @@
 package br.com.vainaweb.backendt2.classeabstrata;
 
+import br.com.vainaweb.backendt2.classeabstrata.erros.Validacao;
+import br.com.vainaweb.backendt2.classeabstrata.validador.CpfCnpjUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class Empresa {
-    private final String nomeFantasia;
-    private final String cnpj;
+    private String nomeFantasia;
+    private String cnpj;
     private List<Colaborador> colaboradores;
 
     public Empresa(String nomeFantasia, String cnpj) {
-        this.nomeFantasia = nomeFantasia;
-        this.cnpj = cnpj;
-        this.colaboradores = new ArrayList<Colaborador>();
+        try{
+            if(!CpfCnpjUtils.isValid(cnpj)) throw new Validacao("CNPJ inválido. Favor digitar no formato: **.***.******-**");
+            this.nomeFantasia = nomeFantasia;
+            this.cnpj=cnpj;
+            this.colaboradores = new ArrayList<Colaborador>();
+        }catch (Validacao e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public void verColaboradores(){

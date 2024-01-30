@@ -1,11 +1,14 @@
 package br.com.vainaweb.backendt2.classeabstrata;
 
+import br.com.vainaweb.backendt2.classeabstrata.erros.Validacao;
+import br.com.vainaweb.backendt2.classeabstrata.validador.CpfCnpjUtils;
+
 import java.util.Scanner;
 
 public abstract class Colaborador {
 
 	private String nome;
-	private final String cpf;
+	private String cpf;
 	private double salario;
 	private boolean isAtivo = false;
 
@@ -13,10 +16,17 @@ public abstract class Colaborador {
 
 	
 	public Colaborador(String nome, String cpf, double salario, Senioridade senioridade) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.salario = salario;
-		this.senioridade = senioridade;
+
+		try{
+			if(!CpfCnpjUtils.isValid(cpf)) throw new Validacao("CPF inválido. Favor digitar no formato: ***.***.***-**");
+			this.nome = nome;
+			this.cpf=cpf;
+			this.salario = salario;
+			this.senioridade = senioridade;
+		}catch (Validacao e){
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 	public Senioridade getSenioridade() {
