@@ -48,16 +48,6 @@ Aqui é passado um parâmetro do tipo Colaborador e ele é adicionado à lista d
 Aqui é passado um parâmetro do tipo String que será usado para buscar algum colaborador em que o CPF seja igual aopassado por parâmetro. Caso seja encontrado, esse colaborador será removido da lista de colaboradores da empresa, caso não, irá ser mostrada uma mensagem de erro dizendo que o colaborador não existe nessa empresa.
 
 
-# validador.CpfCnpjUtils
-
-Classe com os métodos para validação de CPF e CNPJ. Aqui temos a principal função, chamada isValid, que recebe uma String que representa o CPF
-ou o CNPJ e verifica se a String é válida para ambos. Na String é ignorada pontos: "." e traços: "-".
-
-# erros.Validacao
-
-Aqui é apenas uma classe para lidar com erros de validação, quando for utilisado o validador.CpfCnpjUtils.isValid(), se o
-resultado for false, deve ser jogado o erro de validação, indicando que o parâmetro passado não é um CPF e nem um CNPJ.
-
 # Diagrama de Classe
 
 <img src = "./Diagrama.png" />
